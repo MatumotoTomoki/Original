@@ -6,9 +6,9 @@
 bool Exit::Start()
 {
 	m_modelRender.Init("Assets/modelData/OriginalGoal.tkm");
-	m_position.x = 3002.6f;
+	m_position.x = 4454.5f;
 	m_position.y = 3000.0f;
-	m_position.z = 279.1f;
+	m_position.z = -24958.8f;
 	m_modelRender.SetPosition(m_position);
 	m_modelRender.Update();
 	physicsStaticObject.CreateFromModel(m_modelRender.GetModel(), m_modelRender.GetModel().GetWorldMatrix());

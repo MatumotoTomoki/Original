@@ -126,7 +126,7 @@ void Player::Move()
 	// 地面に付いていなかったら。
 	if (!m_characterController.IsOnGround())
 	{
-		m_moveSpeed.y -= 3.0f;        // 重力を加える
+		m_moveSpeed.y -= 0.5f;        // 重力を加える
 	}
 
 	//キャラクターコントローラーを使って座標を移動させる。
@@ -244,9 +244,9 @@ void Player::Warp()
 
 	if (m_clayPipeWarp == true)
 	{
-		m_position.x = 3002.6f;
+		m_position.x = 4454.5f;
 		m_position.y = 3000.0f;
-		m_position.z = 279.1f;
+		m_position.z = -24958.8f;
 		m_characterController.SetPosition(m_position);
 		m_modelRender.SetPosition(m_position);
 		m_modelRender.Update();
