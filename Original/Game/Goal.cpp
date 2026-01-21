@@ -1,6 +1,7 @@
 ﻿#include "stdafx.h"
 #include "Goal.h"
 #include "Player.h"
+#include "Claypipe.h"
 
 bool Goal::Start()
 {
@@ -27,8 +28,14 @@ void Goal::Update()
 	if (toPlayer.Length() <= 90.0f)
 	{
 		m_player->m_warp = true;
-		DeleteGO(this);
+		m_appearance = true;
+		//DeleteGO(this);
 	}
+
+	/*if (m_appearance == true)
+	{
+		m_appearance = false;
+	}*/
 }
 
 void::Goal::Render(RenderContext& rc)

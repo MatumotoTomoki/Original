@@ -2,6 +2,7 @@
 #pragma once
 class Player;
 class Stage;
+class Claypipe;
 class Goal : public IGameObject
 {
 public:
@@ -17,8 +18,8 @@ public:
 	Vector3 m_position;			//座標。
 	Player* m_player;//プレイヤー
 	Stage* m_stage;//ステージ
+	Claypipe* m_clayPipe;//土管
 	PhysicsStaticObject physicsStaticObject;
-
-	
+	bool m_appearance = false;
 };
 

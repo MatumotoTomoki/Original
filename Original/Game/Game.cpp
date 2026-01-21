@@ -19,12 +19,6 @@ bool Game::Start()
 	//ステージを作る
 	m_stage = NewGO<Stage>(0, "stage");
 
-	//土管を作る
-	m_clayPipe = NewGO<Claypipe>(0, "clayPipe");
-
-	//土管の出口を作る
-	m_exit = NewGO<Exit>(0, "exit");
-
 	//ゴールを作る
 	m_goal = NewGO<Goal>(0, "goal");
 	
@@ -37,6 +31,18 @@ void Game::Update()
 	{
 		m_stage2 = NewGO<Stage2>(0, "stage2");
 		DeleteGO(m_stage);
+	}
+
+	if (m_goal->m_appearance == true)
+	{
+		//土管を作る
+		Claypipe* pipeA = NewGO<Claypipe>(0, "clayPipeA");
+		pipeA->SetPosition({ 3000.0f,3000.0f,3000.0f });
+		pipeA->SetWarpDestination({ 4454.5f,3000.0f,-24958.8f });
+		//土管の出口を作る
+		m_exit = NewGO<Exit>(0, "exit");
+		m_goal->m_appearance = false;
+		DeleteGO(m_goal);
 	}
 }
 

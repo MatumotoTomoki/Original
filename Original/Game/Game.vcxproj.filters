@@ -4,6 +4,9 @@
     <Filter Include="system">
       <UniqueIdentifier>{22dd8095-74f9-46df-81a1-36675a040b1f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Warp">
+      <UniqueIdentifier>{5afe7145-b77b-434e-b553-a714b6c0a0fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp" />
@@ -19,6 +22,9 @@
     <ClCompile Include="Stage2.cpp" />
     <ClCompile Include="Claypipe.cpp" />
     <ClCompile Include="Exit.cpp" />
+    <ClCompile Include="src\Warp\WarpManager.cpp">
+      <Filter>Warp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -33,5 +39,8 @@
     <ClInclude Include="Stage2.h" />
     <ClInclude Include="Claypipe.h" />
     <ClInclude Include="Exit.h" />
+    <ClInclude Include="src\Warp\WarpManager.h">
+      <Filter>Warp</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

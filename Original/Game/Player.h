@@ -22,6 +22,8 @@ public:
 	void Dash(float& dash); 
 	//ステージ移動
 	void Warp();
+	//自分の位置
+	void SetPosition(const Vector3& pos);
 
 	//メンバ変数。
 	ModelRender m_modelRender;	//モデルレンダ―。

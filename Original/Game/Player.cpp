@@ -42,6 +42,8 @@ void Player::Update()
 	//ステージ移動
 	Warp();
 
+	
+
 	//空中回転
 	if (m_spin)
 	{
@@ -224,6 +226,15 @@ void Player::PlayAnimation()
 	}
 }
 
+void Player::SetPosition(const Vector3& pos)
+{
+	m_position = pos;
+
+	m_characterController.SetPosition(m_position);
+	m_modelRender.SetPosition(m_position);
+	m_modelRender.Update();
+}
+
 void Player::Warp()
 {
 	
@@ -242,7 +253,7 @@ void Player::Warp()
 		m_warp = false;
 	}
 
-	if (m_clayPipeWarp == true)
+	/*if (m_clayPipeWarp == true)
 	{
 		m_position.x = 4454.5f;
 		m_position.y = 3000.0f;
@@ -251,17 +262,17 @@ void Player::Warp()
 		m_modelRender.SetPosition(m_position);
 		m_modelRender.Update();
 		m_clayPipeWarp = false;
-	}
+	}*/
 
 	if (m_exitWarp == true)
 	{
-		m_position.x = 3000.0f;
+		/*m_position.x = 3000.0f;
 		m_position.y = 3000.0f;
 		m_position.z = 3000.0f;
 		m_characterController.SetPosition(m_position);
 		m_modelRender.SetPosition(m_position);
 		m_modelRender.Update();
-		m_exitWarp = false;
+		m_exitWarp = false;*/
 	}
 	
 }
