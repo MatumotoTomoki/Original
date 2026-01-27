@@ -38,9 +38,36 @@ void Game::Update()
 		//土管を作る
 		Claypipe* pipeA = NewGO<Claypipe>(0, "clayPipeA");
 		pipeA->SetPosition({ 3000.0f,3000.0f,3000.0f });
-		pipeA->SetWarpDestination({ 4454.5f,3000.0f,-24958.8f });
+		pipeA->SetWarpDestination({ 4354.5f,3100.0f,-24958.8f });
+		Claypipe* pipeB = NewGO<Claypipe>(0,"clayPieB");
+		pipeB->SetPosition({ 4354.5f,3000.0f,-24958.8f });
+		pipeB->SetWarpDestination({ 3000.0f,3100.0f,3000.0f });
+		Claypipe* pipeC = NewGO<Claypipe>(0, "clayPipeC");
+		pipeC->SetPosition({ 6507.4f,3000.0f,-24894.8f });
+		pipeC->SetWarpDestination({ -1152.3,3388.7,8036.1 });
+		Claypipe* pipeD = NewGO<Claypipe>(0, "clayPipeD");
+		pipeD->SetPosition({ -1152.3,3288.7,8036.1 });
+		pipeD->SetWarpDestination({ 6507.4f,3100.0f,-24894.8f });
+		Claypipe* pipeE = NewGO<Claypipe>(0, "clayPipeE");
+		pipeE->SetPosition({ 2539.5f,3000.0f,-24909.0f });
+		pipeE->SetWarpDestination({ -11783.3f,3100.0f,617.4 });
+		Claypipe* pipeF = NewGO<Claypipe>(0, "clayPipeF");
+		pipeF->SetPosition({ -11783.3f,3000.0f,617.4 });
+		pipeF->SetWarpDestination({ 2539.5f,3100.0f,-24909.0f });
+		Claypipe* pipeG = NewGO<Claypipe>(0, "clayPipeG");
+		pipeG->SetPosition({ -342.6f,3288.7f,8049.3f });
+		pipeG->SetWarpDestination({ 0.0f,-5000.0f,0.0f });
+		Claypipe* pipeH = NewGO<Claypipe>(0, "clayPipeH");
+		pipeH->SetPosition({ -1950.6f,3288.7f,8013.1f });
+		pipeH->SetWarpDestination({ 3000.0f,3100.0f,3000.0f });
+		Claypipe* pipeI = NewGO<Claypipe>(0, "clayPipeI");
+		pipeI->SetPosition({ -10956.3f,3000.0f,587.0f });
+		pipeI->SetWarpDestination({ 3785.2f,3152.1f,-4291.4f });
+		Claypipe* pipeJ = NewGO<Claypipe>(0, "clayPipeJ");
+		pipeJ->SetPosition({ 3785.2f,3052.1f,-4291.4f });
+		pipeJ->SetWarpDestination({ 28383.6f,3502.6f,943.0f });
 		//土管の出口を作る
-		m_exit = NewGO<Exit>(0, "exit");
+		//m_exit = NewGO<Exit>(0, "exit");
 		m_goal->m_appearance = false;
 		DeleteGO(m_goal);
 	}
